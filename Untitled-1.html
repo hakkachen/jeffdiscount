@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>折扣碼</title>
+</head>
+<body>
+  <button id="copyButton">點擊複製折扣碼</button>
+  
+  <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+      var textToCopy = '沒中獎';
+      var tempInput = document.createElement('input');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert('折扣碼已複製！');
+      window.open("https://shopee.tw/");
+    });
+  </script>
+</body>
+</html>
